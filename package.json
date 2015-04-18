@@ -1,7 +1,7 @@
 {
   "name": "ngapp-bundle",
   "bin": {
-    "ngapp": "bin/cmd.js"
+    "ngapp-bundle": "bin/cmd.js"
   },
   "version": "0.0.1",
   "description": "",
