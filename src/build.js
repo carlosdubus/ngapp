@@ -1,6 +1,7 @@
 var browserify = require('browserify');
 var fs = require("fs");
 var extend = require("extend");
+var path = require("path");
 
 
 
@@ -17,6 +18,13 @@ function createBfyMain(args){
 	}
 
 	function processFile(file){
+
+		var ext = path.extname(file);
+
+		if(ext!=".js"){
+			return;
+		}
+
 		stats = fs.lstatSync(file);
 
 

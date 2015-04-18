@@ -10,8 +10,15 @@ function run(argv){
 }
 
 function runBuild(args){
+	var dir = args._[1];
+	if(!dir){
+		dir = ".";
+	}
+
 	build({
-		dir:path.resolve(args._[1])
+		dir:path.resolve(dir)
+	}).on("error",function(err){
+		console.log(err);
 	}).pipe(process.stdout);
 }
 
