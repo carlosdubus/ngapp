@@ -1,4 +1,4 @@
-# ngapp
+# ngapp-bundle
 Bundle angular apps easily
 
 
@@ -31,7 +31,7 @@ module.exports = function(app){
 Then you do:
 ```
 npm install https://github.com/carlosdubus/ngapp -g
-ngapp bundle ./app > bundle.js
+ngapp-bundle ./app > bundle.js
 ```
 
 Then include bundle.js in your website!
