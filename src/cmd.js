@@ -4,7 +4,7 @@ var path = require("path");
 function run(argv){
 	argv = require('minimist')(argv);
 
-	if(argv._[0] == "build"){
+	if(argv._[0] == "bundle"){
 		runBuild(argv);
 	}
 }
