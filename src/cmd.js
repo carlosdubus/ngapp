@@ -1,24 +1,23 @@
-var build = require("./build");
+var Bundler = require("./bundler");
 var path = require("path");
 
 function run(argv){
 	argv = require('minimist')(argv);
-
-	if(argv._[0] == "bundle"){
-		runBuild(argv);
-	}
+	runBundle(argv);
 }
 
-function runBuild(args){
-	var dir = args._[1];
+function runBundle(args){
+	var dir = args._[0];
 	if(!dir){
 		dir = ".";
 	}
 
-	build({
+	var bundler = new Bundler({
 		dir:path.resolve(dir)
-	}).on("error",function(err){
-		console.log(err);
+	});
+
+	bundler.bundle().on("error",function(err){
+		console.error(err);
 	}).pipe(process.stdout);
 }
 
