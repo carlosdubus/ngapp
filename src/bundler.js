@@ -10,7 +10,8 @@ function Bundler(args){
 }
 
 Bundler.prototype = {
-    bundle:function bundle(args) {
+
+    bundleDir:function bundle(args) {
         args = extend({},this, args);
 
         var mainStream = createBfyMain(args);
@@ -22,6 +23,9 @@ Bundler.prototype = {
         });
         b.add(__dirname + "/../tmp/main.js");
         return b.bundle();
+    },
+    bundle:function(args){
+        return this.bundleDir(args);
     }
 };
 
