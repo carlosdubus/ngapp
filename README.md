@@ -30,10 +30,10 @@ module.exports = function(app){
 
 Then you do:
 ```
-npm install https://github.com/carlosdubus/ngapp -g
+npm install https://github.com/carlosdubus/ngapp-bundle -g
 ngapp-bundle ./app > bundle.js
 ```
 
-Then include bundle.js in your website!
+Then include bundle.js after angular in your website!
 
 TODO: more detailed explanation
